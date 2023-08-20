@@ -1,0 +1,15 @@
+<div class="layout-style">
+    <h1 mat-dialog-title></h1>
+    <mat-dialog-content class="text-center" style=" margin-bottom: 7%;">
+        {{data.message}}
+    </mat-dialog-content>
+    <mat-dialog-actions>
+
+        <div class="row" style="margin-top: 10px;" class="btn-action">
+            <mat-card-actions>
+                <button mat-raised-button color="create" (click)="confirm()">تأكيد</button>
+                <button type="button" mat-raised-button color="delete" (click)="decline()">الغاء</button>
+            </mat-card-actions>
+        </div>
+    </mat-dialog-actions>
+</div>

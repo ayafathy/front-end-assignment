@@ -1,0 +1,12 @@
+.layout-style
+{ width: 99%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mat-dialog-actions {
+  justify-content: center;
+}

@@ -1,0 +1,19 @@
+<div class="layout-style">
+    <h1 mat-dialog-title>{{ data.dialogTitle }}</h1>
+    <mat-dialog-content class="text-center" style=" margin-bottom: 7%;">
+          <mat-form-field class="example-full-width">
+            <mat-label>{{data.InputTitle}}</mat-label>
+            <input matInput #message maxlength="100" [(ngModel)]="UserInput">
+            <mat-hint align="end">{{message.value.length}} / 100</mat-hint>
+          </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+
+        <div class="row" style="margin-top: 10px;" class="btn-action">
+            <mat-card-actions>
+                <button mat-raised-button color="create" (click)="close(true)">تأكيد</button>
+                <button type="button" mat-raised-button color="delete" (click)="close(false)">الغاء</button>
+            </mat-card-actions>
+        </div>
+    </mat-dialog-actions>
+</div>

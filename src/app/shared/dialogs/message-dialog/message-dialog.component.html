@@ -1,0 +1,13 @@
+<div class="layout-style">
+  <h1 mat-dialog-title></h1>
+  <mat-dialog-content class="text-center" style=" margin-bottom: 7%;">
+    {{data.message}}
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <div   class="text-center" style=" margin-bottom: 10%;">
+    <button *ngIf="!data.error" mat-raised-button color="primary"  [mat-dialog-close]="true">ok</button>
+    <button *ngIf="data.error" mat-raised-button color="warn"  [mat-dialog-close]="true">ok</button> 
+  </div>
+  </mat-dialog-actions>
+</div>
+

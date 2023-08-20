@@ -1,0 +1,62 @@
+mat-form-field  {
+    width: 90%;
+    margin: 0 auto;
+  
+  }
+  
+  mat-form-field.ng-invalid.ng-touched {
+    animation: example;
+    animation-duration: 0.3s;
+    margin-bottom: 12px;
+  }
+  
+  @keyframes example {
+    from {margin-bottom: 0;}
+    to {margin-bottom: 12px;}
+  }
+  
+  
+  mat-card-title{
+    text-align: center;
+  }
+  
+  .btn-action
+  { width: 83%;
+    margin: 0 auto;
+  }
+  
+  .animated {
+    width: 80%;
+    margin: 0 auto;
+    color:rgba(0, 0, 0, 0.54);
+  }
+  
+  .example-section {
+    margin: 12px 0;
+  }
+  
+  .example-margin {
+    margin: 0 12px;
+  }
+  
+  
+  .mat-create {
+    background-color:#27AE60;
+  
+    color: #ffff;
+  }
+  .mat-update {
+  
+    background-color:#E67E22;
+    color: #ffff;
+  }
+  
+  .mat-search {
+    background-color:#3498DB;
+    color: #ffff;
+  }
+  .mat-delete {
+    background-color:#E74C3C;
+    color: #ffff;
+  }
+  

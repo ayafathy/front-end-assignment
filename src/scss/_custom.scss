@@ -1,0 +1,30 @@
+// Here you can add other styles
+.sidebar .nav-dropdown.open > .nav-dropdown-items {background-color: #2C3E50;}
+.sidebar .nav-link .nav-icon{color: white;}
+.mat-raised-button:not([class*=mat-elevation-z]){margin:5px}
+.mat-datepicker-content .time-container{direction: ltr;}
+.mat-drawer{
+    width: 250px;
+    background-color: #2C3E50;
+    color: #FDFEFE;
+    overflow: hidden;
+}
+.mat-drawer-container{
+    width: 100%;
+}
+
+.mat-list-base .mat-list-item .mat-list-text>*, .mat-list-base .mat-list-option .mat-list-text>*{
+    color: #FDFEFE;
+}
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content{
+    color: #FDFEFE;
+}
+@media (max-width: 991.98px){
+.app-body {
+    margin-top: 0px;
+}
+}
+
+.wf-loading body {
+    display: none;
+  }

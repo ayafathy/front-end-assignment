@@ -1,0 +1,63 @@
+<div class="animated fadeIn">
+    <div class="card">
+        <div class="card-header">
+            <strong>edit post</strong>
+
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <form [formGroup]="postForm" autocomplete="off" novalidate>
+                    <mat-card-content>
+
+                        <div class="row">
+                            <div class="col">
+                                <mat-form-field>
+                                    <input RestrictSpecialCharacter matInput type="text" placeholder="title" formControlName="title"
+                                        id="title">
+                                    
+                                </mat-form-field>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col">
+                              <mat-form-field>
+                                <input RestrictSpecialCharacter matInput type="text" placeholder="body" formControlName="body"
+                                       id="body">
+                              
+                              </mat-form-field>
+                              </div>
+                              </div>
+                              <div class="row">
+                              <div class="col">
+                              <mat-form-field>
+                                <input RestrictSpecialCharacter matInput type="number" placeholder="id" formControlName="id"
+                                       id="id">
+                              
+                              </mat-form-field>
+                              <mat-form-field>
+                                <input RestrictSpecialCharacter matInput type="number" placeholder="userId" formControlName="userId"
+                                       id="userId">
+                              
+                              </mat-form-field>
+                              </div>
+                            </div>
+                     
+
+                        <div class="row" >
+                            <mat-card-actions>
+                                <button mat-raised-button color="create" [disabled]="(!postForm.valid)"
+                                    (click)="editPost(postForm.value)">edit</button>
+                                <button type="button" mat-raised-button color="delete"
+                                    (click)="onCancel()">cancel</button>
+                            </mat-card-actions>
+                        </div>
+
+                    </mat-card-content>
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

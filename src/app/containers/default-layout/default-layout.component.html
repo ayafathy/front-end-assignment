@@ -1,0 +1,74 @@
+<mat-toolbar style="border-bottom:1px solid #c8ced3;background-color:white">
+  <div class="row" style="width: 100%;">
+    <div class="col-md-3"> 
+      <button  mat-icon-button  aria-label="Menu" (click)="drawer.toggle()"> 
+      </button>
+    </div>
+    <div class="col-md-8">
+     
+    </div>
+    <div class="col-md-1">
+
+      
+    </div>
+    
+  </div>
+</mat-toolbar>
+<div class="app-body">
+
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+      <mat-nav-list>
+
+        
+        <div *ngFor="let route of navItem">
+
+          
+
+          <mat-list-item  (click)="toggle[route.index] = !toggle[route.index]">
+              <a *ngIf="route.children && route.children.length > 0" matLine>{{route.name}}</a>
+              <a *ngIf="!route.children"
+                  matLine  
+                  [routerLink]="route.url" 
+                  ><mat-icon>{{route.icon}}</mat-icon> {{route.name}} </a>
+
+              <span *ngIf="route.children && route.children.length > 0">
+                <mat-icon *ngIf="!toggle[route.index]">expand_more</mat-icon>
+                <mat-icon *ngIf="toggle[route.index]">expand_less</mat-icon>
+              </span>
+          </mat-list-item>
+      
+          <div style="background-color:#5D6D7E" [hidden]="!toggle[route.index]">
+              <mat-selection-list *ngFor="let route of route.children">
+                  <a 
+                    mat-list-item  
+                    [routerLink]="route.url" 
+                    > {{route.name}}</a>
+          
+              </mat-selection-list>
+          </div>
+          <hr>
+        </div>
+      </mat-nav-list>
+
+    </mat-drawer>
+    <mat-drawer-content>
+      <div style="text-align:center;margin: 1px;background-color: white;border-bottom:1px solid #c8ced3;">
+        
+       <h5 style="padding: 1px;"><span> welocme  </span></h5>
+      </div>
+
+      <cui-breadcrumb ></cui-breadcrumb>
+       <div class="container-fluid">
+         <router-outlet></router-outlet>
+       </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+  
+  
+</div>
+
+<app-footer>
+  <span class="ml-auto">Powered by Post Company  <span>&copy; {{year}}</span> </span>
+</app-footer>
